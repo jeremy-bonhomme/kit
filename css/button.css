@@ -1,0 +1,70 @@
+/* =====================================================================
+
+BUTTON CSS
+
+===================================================================== */
+
+button {
+  align-items: center;
+  background-color: #EFF3F6;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  font: inherit;
+  font-weight: 700;
+  justify-content: center;
+  outline: none;
+  padding: 6px 12px;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  text-decoration: none;
+  user-select: none;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-user-select: none;
+  white-space: nowrap;
+}
+
+.ui-button {
+  margin: 0 20px 0 0;
+}
+
+.ui-button--b { background-color: #5D7F98; }
+.ui-button--b:hover { background-color: #4A6578; }
+.ui-button--bordered { border-radius: 10px; }
+
+.ui-button--flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.ui-button--g { color: #5D7F98; }
+.ui-button--g:hover { background-color: #CEDBE4; }
+
+.ui_button__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ui-button__label--down { text-transform: uppercase; }
+.ui-button--margin { margin: 0 20px 30px 0; }
+.ui-button--r { background-color: #E84733; }
+.ui-button--r:hover { background-color: #D02C18; }
+.ui-button__label--up { font-weight: 300; }
+
+.ui-button__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.ui-icon__button {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}

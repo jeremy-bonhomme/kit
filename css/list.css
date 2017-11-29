@@ -1,0 +1,41 @@
+/* =====================================================================
+
+LIST CSS
+
+===================================================================== */
+
+.main-app__list { margin-bottom: 30px; }
+
+.main-app__list-headers {
+  align-items: stretch;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+}
+
+.main-app__list-header {
+  border-left: 1px solid #bbb;
+  color: white;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  font-weight: 300;
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.main-app__list-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-app__list-item { display: flex; }
+
+.main-app__list-label {
+  border-left: 1px solid #bbb;
+  flex: 1 1 100%;
+  padding: 10px;
+}
+
+.main-app__list-label:first-child { border: none; }
+.main-app__list-item--odd { background-color: #f1f1f1; }

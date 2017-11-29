@@ -1,0 +1,28 @@
+/* =====================================================================
+
+TEXTAREA CSS
+
+===================================================================== */
+
+textarea {
+  border: none;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  max-height: 250px;
+  max-width: 100%;
+  min-height: 100px;
+  min-width: 100%;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.ui-textarea {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+
+.ui-textarea.is-focused, .ui-textarea.is-valid { border-bottom: 2px solid #07b1b8; }
+.ui-textarea.is-invalid, .ui-textarea.is-required { border-bottom: 2px solid #e84733; }

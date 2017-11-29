@@ -1,0 +1,63 @@
+/* =====================================================================
+
+CHECKBOX CSS
+
+===================================================================== */
+
+.ui-checkbox {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.ui-checkbox__check {
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  width: 16px;
+}
+
+.ui-checkbox__check.is-invalid { border: 2px solid #e84733; }
+
+.ui-checkbox__hidden {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+.ui-checkbox__input:checked + .ui-checkbox__check { border-color: #07b1b8; }
+.ui-checkbox__input:checked + .ui-checkbox__check .ui-checkbox__path { fill: #07b1b8; }
+.ui-checkbox__input:checked + .ui-checkbox__check .ui-checkbox__polyline { stroke-dashoffset: 0; }
+
+.ui-checkbox__label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.ui-checkbox__label-txt { pointer-events: none; }
+
+.ui-checkbox__path {
+  fill: none;
+  stroke: none;
+}
+
+.ui-checkbox__polyline {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 18px;
+  stroke-dashoffset: 18px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+.ui-checkbox__svg {
+  left: -2px;
+  position: absolute;
+  top: -2px;
+}

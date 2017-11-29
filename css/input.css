@@ -1,0 +1,30 @@
+/* =====================================================================
+
+INPUT CSS
+
+===================================================================== */
+
+input {
+  background: transparent;
+  border: none;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.ui-input {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.ui-input.is-focused, .ui-input.is-valid { border-bottom: 2px solid #07b1b8; }
+.ui-input.is-invalid, .ui-input.is-required { border-bottom: 2px solid #e84733; }
+
+.ui-input__search {
+  border-bottom: 1px solid #ddd;
+  margin: 0 20px; 
+  padding: 0;
+}
