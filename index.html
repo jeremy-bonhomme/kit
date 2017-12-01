@@ -87,10 +87,51 @@
               <span class="main-app__icon ui-icon ui-icon--dehaze"></span>
               <span class="main-app__icon ui-icon ui-icon--clear"></span>
           </button>
-          <div class="main-app__search">
-            <span class="main-app__search-icon ui-icon ui-icon--search"></span>
-            <input class="ui-input ui-input__search" placeholder="Recherche">
-            <button class="ui-button ui-button--bordered ui-button--r" type="submit">Go</button>
+          <div class="main-app__toolbar-wrap">
+            <div class="main-app__language is-collapsed" id="language">
+              <button class="ui-button--w" onclick="languageToggle()">
+                <span class="main-app__language-label" href="/">fr</span>
+                <span class="ui-icon ui-icon--expand_more"></span>
+              </button>
+              <ul class="main-app__language-options">
+                <li class="main-app__language-option">
+                  <button class="ui-button--w" onclick="languageToggle()">
+                    <span class="main-app__language-label" href="/">fr</span>
+                    <span class="ui-icon ui-icon--expand_more"></span>
+                  </button>
+                </li>
+                <li class="main-app__language-option">
+                  <a class="main-app__language-link" href="/">en</a>
+                </li>
+                <li class="main-app__language-option">
+                  <a class="main-app__language-link" href"/">es</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-app__contextuals">
+              <a class="main-app__contextual main-app__contact" href="/">
+                <span class="ui-icon ui-icon--mail_outline"></span>
+              </a>
+              <a class="main-app__contextual main-app__help" href="">
+                  <span class="ui-icon ui-icon--help"></span>
+              </a>
+              <a class="main-app__contextual main-app__station" href="">
+                  <span class="ui-icon ui-icon--location_on"></span>
+              </a>
+            </div>
+            <img class="main-app__photo" />
+            <div class="main-app__user">
+              <h4 class="main-app__name">Prénom</h4>
+              <h5 class="main-app__surname">Nom</h5>
+            </div>
+            <button class="ui-button--w">
+              <span class="ui-icon ui-icon--expand_more"></span>
+            </button>
+            <div class="main-app__disconnect">
+              <button class="ui-button--nth">
+                <span class="ui-icon ui-icon--power_settings_new"></span>
+              </button>
+            </div>
           </div>
         </div>
         <ul class="main-nav-submenu">

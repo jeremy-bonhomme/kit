@@ -30,10 +30,7 @@ button {
   white-space: nowrap;
 }
 
-.ui-button {
-  margin: 0 20px 0 0;
-}
-
+.ui-button { margin: 0 20px 0 0; }
 .ui-button--b { background-color: #5D7F98; }
 .ui-button--b:hover { background-color: #4A6578; }
 .ui-button--bordered { border-radius: 10px; }
@@ -43,8 +40,22 @@ button {
   flex-direction: row;
 }
 
+.ui-button--nth {
+  background-color: transparent;
+  color: #CEDBE4;
+  display: flex;
+  padding: 0;
+}
+
 .ui-button--g { color: #5D7F98; }
 .ui-button--g:hover { background-color: #CEDBE4; }
+
+.ui-button--w {
+  background-color: white;
+  color: #5D7F98;
+  font-size: 16px;
+  text-transform: uppercase;
+}
 
 .ui_button__label {
   display: flex;

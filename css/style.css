@@ -41,7 +41,7 @@ GENERIC CSS
 
 html {
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 * { box-sizing: inherit; }
@@ -52,7 +52,10 @@ body {
   font: 14px/1.5 'lato_light', sans-serif;
 }
 
-a { text-decoration: none; }
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 img {
   max-height: 100%;
@@ -195,10 +198,35 @@ MAIN CONTENT
 
 ===================================================================== */
 
+.main-app__contact, .main-app__help, .main-app__station {
+  align-items: center;
+  color: #CEDBE4;
+  display: flex;
+}
+
 .main-app__content { 
   height: calc( 100vh - 9.5rem );
   overflow-x: auto;
   padding: 20px 20px 0 20px;
+}
+
+.main-app__contextual:nth-child( even ) { margin: 0 10px; }
+
+.main-app__contextuals {
+  align-items: center;
+  display: flex;
+  font-size: 2.2rem;
+  margin-left: 20px;
+}
+
+.main-app__disconnect {
+  align-items: center;
+  border-left: 2px solid #CEDBE4;
+  color: #CEDBE4;
+  display: flex;
+  font-size: 3.5rem;
+  height: 100%;
+  padding: 0 20px;
 }
 
 .main-app__icon {
@@ -206,18 +234,46 @@ MAIN CONTENT
   font-size: 2rem;
 }
 
-.main-app__search {
-  display: flex;
-  flex: 0 0 30rem;
-  margin-left: 20px;
+.main-app__language { position: relative; }
+
+.main-app__language.is-collapsed .main-app__language-options {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.main-app__search-icon {
-  border-right: 6px solid #E84733;
+.main-app__language-link {
   color: #5D7F98;
-  font-size: 2.2rem;
-  line-height: 1.333333;
-  padding-right: 10px;
+  display: flex;
+  font-family: 'lato_bold', sans-serif;
+  font-size: 16px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+}
+
+.main-app__language-link:hover { background-color: #CEDBE4; }
+
+.main-app__language-options {
+  background-color: white;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  color: #5d7f98;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 300ms;
+  visibility: visible;
+}
+
+.main-app__name, .main-app__surname { font-size: 1rem; }
+
+.main-app__photo {
+  background-color: #cedbe4;
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  margin-left: 20px;
+  width: 50px;
 }
 
 .main-nav-submenu {
@@ -235,12 +291,13 @@ MAIN CONTENT
 
 .main-nav-submenu__link {
   align-items: center;
-  cursor: pointer;
   display: flex;
   height: calc( 1.33333 * 2.25rem + 2 * 12px - 6px);
   justify-content: flex-start;
   padding: 18px 18px calc( 18px - 6px);
 }
+
+.main-app__surname { font-family: 'lato_bold', sans-serif; }
 
 .main-app__toggle {
   display: flex;
@@ -257,6 +314,15 @@ MAIN CONTENT
   display: flex;
   height: 5rem;
 }
+
+.main-app__toolbar-wrap {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: end;
+}
+
+.main-app__user { margin-left: 20px; }
 
 
 
@@ -279,7 +345,6 @@ RESPONSIVE
 
   .main-app__toggle { z-index: 3; }
   
-  .main-app__toolbar { width: 80px; }
   .main-nav { flex: 0 0 5rem; }
   .main-nav.is-collapsed { margin-left: 0; }
 
@@ -326,17 +391,17 @@ RESPONSIVE
 }
 
 @media all and ( max-width: 560px ) {
-  
-  .main-app__search { flex: 0 0 20rem; }
-  .main-app__search-icon { display: none; }
+
+  .main-app__photo, .main-app__user { display: none; }
+  .main-app__toggle { width: 100%; }
+
+  .main-app__toolbar {
+    flex-direction: column;
+    height: 10rem;
+  }
+
+  .main-app__list-header:nth-child( n + 3 ), .main-app__list-label:nth-child( n + 3 ) { display: none; }
+
   .ui-form { width: 100%; }
   
-}
-  
-
-
-@media all and ( max-width: 410px ) {
-
-  .main-app__search { flex: 0 0 7rem; }
-
 }
