@@ -11,3 +11,15 @@ function languageToggle() {
 
   l.classList.contains( 'is-collapsed' ) ? l.className = 'main-app__language' : l.className += ' is-collapsed';
 }
+
+function openPopup() {
+  var o = document.getElementById( 'popup' );
+
+  o.className += ' is-opened';
+}
+
+function closePopup() {
+  var c = document.getElementById( 'popup' );
+
+  c.className = 'main-app__overlay';
+}

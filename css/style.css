@@ -41,7 +41,7 @@ GENERIC CSS
 
 html {
   box-sizing: border-box;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 * { box-sizing: inherit; }
@@ -72,6 +72,7 @@ li { list-style-type: none; }
 #main-app {
   display: flex;
   height: 100vh;
+  position: relative;
   width: 100vw;
 }
 
@@ -319,10 +320,58 @@ MAIN CONTENT
   align-items: center;
   display: flex;
   flex: 1;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .main-app__user { margin-left: 20px; }
+
+
+
+
+/* =====================================================================
+
+OVERLAY
+
+===================================================================== */
+
+.main-app__overlay {
+  background-color: rgba( 80, 80, 80, 0.7 );
+  visibility: hidden;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.main-app__overlay.is-opened { visibility: visible; }
+
+.main-app__overlay-content {
+  background-color: white;
+  padding: 20px;
+}
+
+.main-app__overlay-header {
+  align-items: center;
+  background-color: #5D7F98;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main-app__overlay-title {
+  color: white;
+  text-transform: uppercase;
+}
+
+.main-app__overlay-wrapper {
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY( -50% );
+  width: 80%;
+}
 
 
 
@@ -356,12 +405,13 @@ RESPONSIVE
   .main-nav.is-collapsed .main-nav__logo--collapsed { display: none; }
 
   .main-nav.is-collapsed .main-nav-menu {
+    display: block;
     height: 100vh;
-    position: absolute;
+    justify-content: flex-start;
     left: 0;
+    position: absolute;
     top: 80px;
     width: 100%;
-    justify-content: start;display: block;
   }
 
   .main-nav.is-collapsed .main-nav-menu__label { display:block; }
@@ -371,8 +421,8 @@ RESPONSIVE
   .main-nav__logo-link {
     display: block;
     height: 100%;
-    width: 165px;
     margin: 0 auto;
+    width: 165px;
   }
 
   .main-nav-submenu {
@@ -390,18 +440,13 @@ RESPONSIVE
 
 }
 
-@media all and ( max-width: 560px ) {
+@media all and ( max-width: 580px ) {
 
+  .main-app__contextual:nth-child( even ) { margin: 0; }
+  .main-app__contextuals { margin: 0; }
+  .main-app__disconnect { padding: 0; }
   .main-app__photo, .main-app__user { display: none; }
-  .main-app__toggle { width: 100%; }
-
-  .main-app__toolbar {
-    flex-direction: column;
-    height: 10rem;
-  }
-
   .main-app__list-header:nth-child( n + 3 ), .main-app__list-label:nth-child( n + 3 ) { display: none; }
-
   .ui-form { width: 100%; }
   
 }

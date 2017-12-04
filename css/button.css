@@ -68,6 +68,7 @@ button {
 .ui-button--r { background-color: #E84733; }
 .ui-button--r:hover { background-color: #D02C18; }
 .ui-button__label--up { font-weight: 300; }
+.ui-button__popup { font-size: 30px; }
 
 .ui-button__wrap {
   display: flex;
