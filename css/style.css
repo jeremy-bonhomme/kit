@@ -342,6 +342,7 @@ OVERLAY
   position: absolute;
   top: 0;
   width: 100vw;
+  z-index: 3;
 }
 
 .main-app__overlay.is-opened { visibility: visible; }
