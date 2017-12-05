@@ -381,11 +381,6 @@ RESPONSIVE
 
 @media all and ( max-width: 920px ) {
 
-  #header {
-    position: relative;
-    z-index: 2;
-  }
-
   #main-app { flex-direction: column; }
   .main-app__main { margin-top: -80px; }
 
@@ -403,12 +398,13 @@ RESPONSIVE
 
   .main-nav.is-collapsed .main-nav-menu {
     display: block;
-    height: 100vh;
+    height: 100%;
     justify-content: flex-start;
     left: 0;
     position: absolute;
     top: 80px;
     width: 100%;
+    z-index: 3;
   }
 
   .main-nav.is-collapsed .main-nav-menu__label { display:block; }
