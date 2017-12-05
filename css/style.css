@@ -41,7 +41,7 @@ GENERIC CSS
 
 html {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 * { box-sizing: inherit; }
@@ -105,7 +105,6 @@ MAIN NAV
 
 .main-nav {
   flex: 0 0 17rem;
-  height: 100vh;
   transition: margin-left 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -150,7 +149,7 @@ MAIN NAV
 
 .main-nav-menu {
   background-color: #eff3f6;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-nav-menu__icon {
@@ -205,12 +204,7 @@ MAIN CONTENT
   display: flex;
 }
 
-.main-app__content { 
-  height: calc( 100vh - 9.5rem );
-  overflow-x: auto;
-  padding: 20px 20px 0 20px;
-}
-
+.main-app__content { padding: 20px 20px 0 20px; }
 .main-app__contextual:nth-child( even ) { margin: 0 10px; }
 
 .main-app__contextuals {
@@ -339,9 +333,9 @@ OVERLAY
 .main-app__overlay {
   background-color: rgba( 80, 80, 80, 0.7 );
   visibility: hidden;
-  height: 100vh;
+  height: 100%;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   z-index: 3;
