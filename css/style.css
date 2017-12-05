@@ -314,6 +314,8 @@ MAIN CONTENT
   align-items: center;
   display: flex;
   height: 5rem;
+  position: relative;
+  z-index: 3;
 }
 
 .main-app__toolbar-wrap {
