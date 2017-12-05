@@ -71,7 +71,7 @@ li { list-style-type: none; }
 
 #main-app {
   display: flex;
-  height: 100vh;
+  height: 100%;
   position: relative;
   width: 100vw;
 }
